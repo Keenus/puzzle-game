@@ -1,0 +1,23 @@
+<ng-container>
+  <div class="position-absolute bottom-0 w-100 p-3 bg-opacity-75 bg-black d-flex justify-content-evenly align-items-center">
+  <ul>
+    @for (item of footerItems; track item) {
+    <li>
+        {{ item.title }}
+      </li>
+    }
+  </ul>
+    <p class="text-danger-emphasis">
+      KinCode production
+      <span></span>
+    </p>
+    <ul class="list-unstyled">
+      @for (sponsor of sponsorsList; track sponsor) {
+      <li>
+      <img [src]="sponsor.logo" alt="{{sponsor.logo}}">
+      {{ sponsor.name }}
+      </li>
+      }
+    </ul>
+  </div>
+</ng-container>
